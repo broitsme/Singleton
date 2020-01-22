@@ -1,0 +1,20 @@
+using System;
+class Singleton {
+   static int count = 0;
+   private static Singleton obj = new Singleton();
+   public static Singleton getObj{
+	   get{
+	   return obj;
+	   }
+   }
+   private Singleton() {count++;
+			   Console.WriteLine(count);}
+}
+
+public class Program {
+   public static void Main() {
+	   Singleton s1 = Singleton.getObj;
+	   Singleton s2 = Singleton.getObj;
+	   Singleton s3 = Singleton.getObj;
+   }
+}
